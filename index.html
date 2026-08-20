@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#061a3a">
+  <title>AFL Team Guess</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="badge">🏉 AFL TEAM GUESS</div>
+      <h1 id="teamTitle">Melbourne — 2026</h1>
+      <p>Guess every player on the list.</p>
+    </header>
+
+    <section class="stats">
+      <div><strong id="found">0</strong><span>Found</span></div>
+      <div><strong id="total">0</strong><span>Total</span></div>
+      <div><strong id="percent">0%</strong><span>Complete</span></div>
+    </section>
+
+    <section class="progress-wrap">
+      <div class="progress"><div id="progressBar"></div></div>
+    </section>
+
+    <section class="guess-card">
+      <label for="guessInput">Enter a player's name</label>
+      <div class="input-row">
+        <input id="guessInput" autocomplete="off" autocapitalize="words"
+               placeholder="e.g. Max Gawn" aria-label="Player name">
+        <button id="guessBtn">GUESS</button>
+      </div>
+      <div id="suggestions" class="suggestions"></div>
+      <div id="message" class="message"></div>
+    </section>
+
+    <section class="categories" id="categories"></section>
+
+    <section class="players-card">
+      <div class="players-header">
+        <h2>Players</h2>
+        <button id="revealBtn" class="secondary">Reveal Answers</button>
+      </div>
+      <div id="players"></div>
+    </section>
+
+    <footer>
+      <button id="newGameBtn" class="new-game">NEW GAME</button>
+      <p>AFL Team Guess — fan-made game</p>
+    </footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
